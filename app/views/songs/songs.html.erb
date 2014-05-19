@@ -1,0 +1,82 @@
+<html>
+<head>
+	
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="songstyle2.css" />
+		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="grid2.css" />
+		<link rel="stylesheet" media="only screen and (min-width: 481px)" href="songstyle.css" />
+		<link rel="stylesheet" media="only screen and (min-width: 481px)" href="grid.css" />
+
+	
+		
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+<script>
+
+    $(function() {
+
+   var people = [];
+
+   $.getJSON('songs.json', function(data) 
+   {
+       $.each(data.data, function(i, f) 
+	   {
+		
+          var tblRow = "<tr>" + "<td>" + f[9] + "</td>" +
+           "<td>" + f[10] + "</td>" + "<td>" + f[11] + "</td>" + "<td>" + f[8] + "</td>" + "</tr>"
+           $(tblRow).appendTo("#userdata tbody");
+     });
+
+   });
+
+});
+
+</script>
+</head>
+
+<body>
+<div class="header">
+			<div class="container_12">
+				<div class="topButton"><a href="/main">Home</a></div>
+				<div class="topButton"><a href="/songs">Songs</a></div>
+				<div class="topButton"><a href="/other">Drinking</a></div>
+				<div class="topButton"><a href="/euro">Eurovision</a></div>
+				<div class="topButton"><a href="/about">About</a></div>
+				<div class="topButton"><a href="/contact">Contact</a></div>
+			</div>
+		</div>
+<div class="search">
+<form action="/search2" method="post">
+<%= token_tag %>
+<input name="key" type="input" size="30" />
+<input value="Search by artist" type="submit" />
+</form>
+</div>
+<div class="bunny">
+<h2>Music!</h2>
+<br /><p>Where would we be without music.
+<br />Below is a list of 1000 songs that you need to listen to (as compiled by <em>The Guardian</em>).</p>
+<div class="wrapper">
+<div class="profile">
+
+   <center><table id= "userdata" border="2">
+	<h1>Something about songs</h1>
+  <thead>
+            <th>Title</th>
+			<th>Artist</th>
+			<th>Year</th>
+			<th>Theme</th>
+        </thead>
+      <tbody>
+		
+       </tbody>
+   </table></center>
+   
+</div>
+</div>
+</div>
+<div id="map_canvas"></div>  
+</div>
+</body>
+</html>

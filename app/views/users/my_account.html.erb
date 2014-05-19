@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		
+		<script src="http://code.jquery.com/jquery-1.7.min.js" ></script>
+		<script src="http://code.jquery.com/ui/1.7.0/jquery-ui.js" ></script>
+		
+		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="style2.css" />
+		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="grid2.css" />
+		<link rel="stylesheet" media="only screen and (min-width: 481px)" href="style1.css" />
+		<link rel="stylesheet" media="only screen and (min-width: 481px)" href="grid.css" />
+	</head>
+	
+	<body>
+	
+		<div class="header">
+			<div class="container_12">
+				<div class="topButton"><a href="/main">Home</a></div>
+				<div class="topButton"><a href="/songs">Songs</a></div>
+				<div class="topButton"><a href="/other">Drinking</a></div>
+				<div class="topButton"><a href="/euro">Eurovision</a></div>
+				<div class="topButton"><a href="/about">About</a></div>
+				<div class="topButton"><a href="/contact">Contact</a></div>
+			</div>
+		</div>
+		
+		<div class="container_8 main">
+			<div class="grid_8">
+				<div class="content1">
+
+					<!-- app/views/users/my_account.html.erb -->
+					<br/><div class="headero">Account Info</div>
+					
+					<div class="bodyo">					
+					
+					<p>Your username is <strong><%= @sessName %></strong>
+					<br/><br/>
+					<% if @authed == 1%>
+					<center>
+					<u><p>List of website users</p></u><br/>
+					<% @test.each do |cat| %>
+						<p><%= cat.email %></p>
+					<%end%>
+					<%end%>
+					</center>
+
+					<br/>
+					<center>
+					<form action="/log_out">
+						<input type="submit" value="Log out"/>
+					</form>
+					</center>
+					</div>
+				</div>
+			</div>
+		<div>
+	</body>
+</html>

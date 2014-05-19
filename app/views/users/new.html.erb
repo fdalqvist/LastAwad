@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		
+		<script src="http://code.jquery.com/jquery-1.7.min.js" ></script>
+		<script src="http://code.jquery.com/ui/1.7.0/jquery-ui.js" ></script>
+		
+		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="style2.css" />
+		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="grid2.css" />
+		<link rel="stylesheet" media="only screen and (min-width: 481px)" href="style1.css" />
+		<link rel="stylesheet" media="only screen and (min-width: 481px)" href="grid.css" />
+	</head>
+	
+	<body>
+	
+		<div class="header">
+			<div class="container_12">
+				<div class="topButton"><a href="/main">Home</a></div>
+				<div class="topButton"><a href="/songs">Songs</a></div>
+				<div class="topButton"><a href="/other">Drinking</a></div>
+				<div class="topButton"><a href="/euro">Eurovision</a></div>
+				<div class="topButton"><a href="/about">About</a></div>
+				<div class="topButton"><a href="/contact">Contact</a></div>
+			</div>
+		</div>
+		
+		<div class="container_8 main">
+			<div class="grid_8">
+				<div class="content1">
+					<!-- /app/views/users/new.html.erb -->
+					<br/><div class="headero">Sign Up</div>
+					<center>
+					<%= form_for @user do |f| %>  
+
+					<% if @user.errors.any? %>  
+
+					<div class="error_messages">  
+						<h2>Form is invalid</h2>  
+						<ul>  
+							<% for message in @user.errors.full_messages %>  
+							<li><%= message %></li>  
+							<% end %>  
+						</ul>  
+					</div>  
+
+					<% end %>  
+
+					<p>  
+
+					<%= f.label :email %><br />  
+		
+					<%= f.text_field :email %>  
+
+					</p>  
+
+					<p>  
+
+					<%= f.label :password %><br />  
+
+					<%= f.password_field :password %>  
+
+				</p>  
+
+				<p>  
+
+					<%= f.label :password_confirmation %><br/>  
+
+					<%= f.password_field :password_confirmation %>  
+
+				</p>  
+
+				<p class="button"><%= f.submit %></p>  
+
+			<% end %>  
+			</center>
+
+			</div>
+		</div>
+</div>
+
+</body>
+</html>

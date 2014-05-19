@@ -1,0 +1,62 @@
+<html>
+<head>
+	<%= stylesheet_link_tag "devstyle.css" %>
+	<%= stylesheet_link_tag "grid.css" %>
+<title>Search results
+</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+<script>
+
+    $(function() {
+
+   var people = [];
+
+   $.getJSON('drinking.json', function(data) 
+   {
+       $.each(data.data, function(i, f) 
+	   {
+		
+          var tblRow = "<tr>" + "<td>" + f[8] + "</td>" + "<td>" + f[9] + "</td>" + "<td>" + "</td>" + "</tr>"
+           var country = "<%=@country%>" + "";
+		   if(f[8].indexOf( country ) > -1)
+			{
+		   $(tblRow).appendTo("#userdata tbody");
+		   }
+     });
+
+   });
+
+});
+</script>
+
+</head>
+<body>
+<div class="header">
+			<div class="container_12">
+				<div class="topButton"><a href="/main">Home</a></div>
+				<div class="topButton"><a href="/songs">Songs</a></div>
+				<div class="topButton"><a href="/other">Drinking</a></div>
+				<div class="topButton"><a href="/euro">Eurovision</a></div>
+				<div class="topButton"><a href="/about">About</a></div>
+				<div class="topButton"><a href="/contact">Contact</a></div>
+			</div>
+		</div>
+<h1>Search results</h1>
+<div class="wrapper">
+<div class="profile">
+   <center><table id= "userdata" border="2">
+  <thead>
+            <th>Location</th>
+            <th>Liters per capita pure alcohol adult consumption</th>
+        </thead>
+      <tbody>
+		
+       </tbody>
+   </table></center>
+
+</div>
+</div>
+<p><%=@country%><p>
+<p> <a href="/other"> Back</a> </body>
+</html>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0
+Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-
+transitional.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<head>
+<title> Contact Us</title>
+
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		
+		<script src="http://code.jquery.com/jquery-1.7.min.js" ></script>
+		<script src="http://code.jquery.com/ui/1.7.0/jquery-ui.js" ></script>
+
+		<link rel="stylesheet" href="contactstyle.css" />
+		<link rel="stylesheet" href="grid.css" />
+<script type="text/javascript">
+	function validateRequired()
+		{
+		var x=document.forms["contactform"]["name"].value;
+			if (x==null || x=="")
+			{
+			return false;
+			}
+		}
+
+	function validateEmail()
+		{
+		var x=document.forms["contactform"]["email"].value;
+		var atpos=x.indexOf("@");
+		var dotpos=x.lastIndexOf(".");
+		if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+			{
+			return false;
+			}
+		}
+
+	function validateForm() {
+		$("#name").css("background-color", "#ffffff");
+		$("#email").css("background-color", "#ffffff");
+		$("#nameerror").hide();
+		$("#mailerror").hide();
+		if (false == validateRequired()){
+			$("#name").css("background-color", "#cc0000");
+			$("#nameerror").html("<h4>Please enter your name.</h4>");
+			$("#nameerror").show()
+			return false;}
+		if (false == validateEmail()){
+			$("#email").css("background-color", "#cc0000");
+			$("#mailerror").html("<h4>Please provide a functioning email address. <br />It must be of the format 'abc123@xyz.pq'</h4>");
+			$("#mailerror").show();
+			return false;}
+		else{
+		return true;}
+		}
+</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+</head>
+<body>
+	<div class="header">
+			<div class="container_12">
+				<div class="topButton"><a href="/main">Home</a></div>
+				<div class="topButton"><a href="/songs">Songs</a></div>
+				<div class="topButton"><a href="/other">Drinking</a></div>
+				<div class="topButton"><a href="/euro">Eurovision</a></div>
+				<div class="topButton"><a href="/about">About</a></div>
+				<div class="topButton"><a href="/contact">Contact</a></div>
+			</div>
+		</div>
+		
+		<br /><br /><br /><br /><br /><br /><br />
+		
+				<div class="container_12">
+				<div id="mainbox">
+		
+<center><form name="contactform" method="post" onsubmit="return validateForm();" action="http://homepages.abdn.ac.uk/e.pignotti/pages/post.php" style="width: 500px" >
+<fieldset>
+<legend="Contact Us" />
+<h2>Name:</h2>
+<br />
+<input type="text" name="name" id="name" size="30" />
+<div id="nameerror"></div>
+<br />
+<h2>Email:</h2>
+<br />
+<input type="text" name="email" id="email" size="30" />
+<div id="mailerror"></div>
+<br />
+<h2>Message</h2>
+<textarea name="message" id="message" rows="6" cols="45">
+Enter your message here
+</textarea>
+<br />
+<input type="submit" value="Send Message" />
+<br />
+<br />
+<p>.</p>
+</fieldset>
+</form>
+<form action="http://localhost:3000/main" style="width: 50px">
+<input Type="submit" value="cancel">
+</form>
+</center>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<html>
+<head>
+	
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="devstyle2.css" />
+		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="grid2.css" />
+		<link rel="stylesheet" media="only screen and (min-width: 481px)" href="devstyle.css" />
+		<link rel="stylesheet" media="only screen and (min-width: 481px)" href="grid.css" />
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc4qswXAX2nLT2_YptHxe2cWnAuc-pKYA&sensor=true"></script>
+		<script type="text/javascript">
+			function initialize() { 
+				var mapOptions = {
+					center: new google.maps.LatLng(2.8800, 23.6560), 
+					zoom: 8,
+				};
+				var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+		
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+<script>
+
+    $(function() {
+
+   var people = [];
+
+   $.getJSON('drinking.json', function(data) 
+   {
+       $.each(data.data, function(i, f) 
+	   {
+		
+          var tblRow = "<tr>" + "<td>" + f[8] + "</td>" + "<td>" + f[9] + "</td>" + "<td>" + "</td>" + "</tr>"
+           $(tblRow).appendTo("#userdata tbody");
+     });
+
+   });
+
+});
+
+</script>
+</head>
+
+<body>
+<div class="header">
+			<div class="container_12">
+				<div class="topButton"><a href="/main">Home</a></div>
+				<div class="topButton"><a href="/songs">Songs</a></div>
+				<div class="topButton"><a href="/other">Drinking</a></div>
+				<div class="topButton"><a href="/euro">Eurovision</a></div>
+				<div class="topButton"><a href="/about">About</a></div>
+				<div class="topButton"><a href="/contact">Contact</a></div>
+			</div>
+		</div>
+<div class="search">
+<form action="/search" method="post">
+<%= token_tag %>
+<input name="key" type="input" size="30" />
+<input value="Search by Country" type="submit" />
+</form>
+</div>
+<h2>Drinking Habits</h2>
+<br /><p>In the table below you can see the average drinkning habits of people in different parts of the world.
+<br /> Drink responsibly!</p>
+<div class="wrapper">
+<div class="profile">
+
+   <center>
+   <iframe width="480" height="360" src="//www.youtube.com/embed/189383205_k" frameborder="0" allowfullscreen></iframe>
+   <table id= "userdata" border="2">
+  <thead>
+            <th>Location</th>
+            <th>Liters per capita pure alcohol adult consumption</th>
+        </thead>
+      <tbody>
+		
+       </tbody>
+   </table></center>
+   
+
+</div> 
+
+</div>
+</body>
+</html>

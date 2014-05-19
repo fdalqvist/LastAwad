@@ -1,0 +1,836 @@
+<html>
+<head>
+	
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="devstyle2.css" />
+		<link rel="stylesheet" media="only screen and (max-width: 480px)" href="grid2.css" />
+		<link rel="stylesheet" media="only screen and (min-width: 481px)" href="devstyle.css" />
+		<link rel="stylesheet" media="only screen and (min-width: 481px)" href="grid.css" />
+		
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+<script>
+
+    $(function() {
+
+   var people = [];
+
+   $.getJSON('euro2.json', function(data) 
+   {
+       $.each(data.data, function(i, f) 
+	   {
+		
+          var tblRow = "<tr>" + "<td>" + f.From_country + "</td>" +
+           "<td>" + To_country + "</td>" + "<td>" + f.Jury_rank + "</td>" + "<td>" + f.Televote_rank + "</td>" + "<td>" + f.Combined_rank + "</td>"  + "<td>" + f.Points + "</td>" + "</tr>"
+           $(tblRow).appendTo("#userdata tbody");
+     });
+
+   });
+
+});
+
+</script>
+</head>
+
+<body>
+<div class="header">
+			<div class="container_12">
+				<div class="topButton"><a href="/main">Home</a></div>
+				<div class="topButton"><a href="/songs">Songs</a></div>
+				<div class="topButton"><a href="/other">Drinking</a></div>
+				<div class="topButton"><a href="/euro">Eurovision</a></div>
+				<div class="topButton"><a href="/about">About</a></div>
+				<div class="topButton"><a href="/contact">Contact</a></div>
+			</div>
+		</div>
+<div class="search">
+<form action="/search" method="post">
+<%= token_tag %>
+<input name="key" type="input" size="30" />
+<input value="Search" type="submit" />
+</form>
+</div>
+<h2>Eurovision</h2>
+<br /><p>Occuring only once a year, Eurovision sees drinkning and music come together in a perfect storm of sorts.
+<br />Below is the outcome of the most recent occurence.</p>
+<div class="wrapper">
+<div class="profile">
+<table border="2">
+<thead><tr>
+<th title="Sort ascending" role="columnheader button" tabindex="0" scope="col" class="autorowspan headerSort">Year</th>
+<th scope="col" class="unsortable" width="65">Date</th>
+<th title="Sort ascending" role="columnheader button" tabindex="0" scope="col" class="autorowspan headerSort">Host City</th>
+<th title="Sort ascending" role="columnheader button" tabindex="0" scope="col" class="autorowspan headerSort" width="120">Winner</th>
+<th title="Sort ascending" role="columnheader button" tabindex="0" scope="col" class="autorowspan headerSort">Song</th>
+<th title="Sort ascending" role="columnheader button" tabindex="0" scope="col" class="autorowspan headerSort">Performer</th>
+<th scope="col" class="unsortable">Writers</th>
+<th scope="col" class="unsortable">Points</th>
+<th scope="col" class="unsortable">Margin</th>
+<th scope="col" class="unsortable" width="135">Runner-up</th>
+</tr></thead><tbody>
+<tr>
+<th style="text-align:left" scope="row"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1956" title="Eurovision Song Contest 1956">1956</a></th>
+<td>24 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Switzerland" title="Switzerland"><img alt="Switzerland" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-Flag_of_Switzerland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/24px-Flag_of_Switzerland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/32px-Flag_of_Switzerland.svg.png 2x" data-file-width="1000" data-file-height="1000" height="16" width="16"></a></span> <a href="http://en.wikipedia.org/wiki/Lugano" title="Lugano">Lugano</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-Flag_of_Switzerland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/24px-Flag_of_Switzerland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/32px-Flag_of_Switzerland.svg.png 2x" data-file-width="1000" data-file-height="1000" height="16" width="16">&nbsp;&nbsp;</span><a href="http://en.wikipedia.org/wiki/Switzerland_in_the_Eurovision_Song_Contest" title="Switzerland in the Eurovision Song Contest">Switzerland</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Refrain_%28Lys_Assia_song%29" title="Refrain (Lys Assia song)">Refrain</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Lys_Assia" title="Lys Assia">Lys Assia</a></td>
+<td><a href="http://en.wikipedia.org/wiki/G%C3%A9o_Voumard" title="Géo Voumard">Géo Voumard</a>, <a href="http://en.wikipedia.org/wiki/%C3%89mile_Gardaz" title="Émile Gardaz">Émile Gardaz</a></td>
+<td colspan="3">
+<center><i>Never announced</i><sup id="cite_ref-Runner-up_never_announced_5-0" class="reference"><a href="#cite_note-Runner-up_never_announced-5"><span>[</span>N 1<span>]</span></a></sup></center>
+</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1957" title="Eurovision Song Contest 1957">1957</a></th>
+<td>3 March</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Germany" title="Germany"><img alt="Germany" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Germany.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/35px-Flag_of_Germany.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/46px-Flag_of_Germany.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Frankfurt" title="Frankfurt">Frankfurt</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_Netherlands.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/35px-Flag_of_the_Netherlands.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/45px-Flag_of_the_Netherlands.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Netherlands_in_the_Eurovision_Song_Contest" title="Netherlands in the Eurovision Song Contest">Netherlands</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Net_als_toen" title="Net als toen">Net als toen</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Corry_Brokken" title="Corry Brokken">Corry Brokken</a></td>
+<td>Guus Jansen, <a href="http://en.wikipedia.org/wiki/Willy_van_Hemert" title="Willy van Hemert">Willy van Hemert</a></td>
+<td><span style="display:none" class="sortkey">7001310000000000000</span>31</td>
+<td><span style="display:none" class="sortkey">7001140000000000000</span>14</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_France.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/35px-Flag_of_France.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/45px-Flag_of_France.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/France_in_the_Eurovision_Song_Contest" title="France in the Eurovision Song Contest">France</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1958" title="Eurovision Song Contest 1958">1958</a></th>
+<td>12 March</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Netherlands" title="Netherlands"><img alt="Netherlands" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_Netherlands.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/35px-Flag_of_the_Netherlands.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/45px-Flag_of_the_Netherlands.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Hilversum" title="Hilversum">Hilversum</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_France.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/35px-Flag_of_France.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/45px-Flag_of_France.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/France_in_the_Eurovision_Song_Contest" title="France in the Eurovision Song Contest">France</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Dors,_mon_amour" title="Dors, mon amour">Dors, mon amour</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Andr%C3%A9_Claveau" title="André Claveau">André Claveau</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Pierre_Delano%C3%AB" title="Pierre Delanoë">Pierre Delanoë</a>, <a href="http://en.wikipedia.org/wiki/Hubert_Giraud" title="Hubert Giraud">Hubert Giraud</a></td>
+<td><span style="display:none" class="sortkey">7001270000000000000</span>27</td>
+<td><span style="display:none" class="sortkey">7000300000000000000</span>3</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-Flag_of_Switzerland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/24px-Flag_of_Switzerland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/32px-Flag_of_Switzerland.svg.png 2x" data-file-width="1000" data-file-height="1000" height="16" width="16">&nbsp;&nbsp;</span><a href="http://en.wikipedia.org/wiki/Switzerland_in_the_Eurovision_Song_Contest" title="Switzerland in the Eurovision Song Contest">Switzerland</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1959" title="Eurovision Song Contest 1959">1959</a></th>
+<td>11 March</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/France" title="France"><img alt="France" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_France.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/35px-Flag_of_France.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/45px-Flag_of_France.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Cannes" title="Cannes">Cannes</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_Netherlands.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/35px-Flag_of_the_Netherlands.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/45px-Flag_of_the_Netherlands.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Netherlands_in_the_Eurovision_Song_Contest" title="Netherlands in the Eurovision Song Contest">Netherlands</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Een_beetje" title="Een beetje" class="mw-redirect">Een beetje</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Teddy_Scholten" title="Teddy Scholten">Teddy Scholten</a></td>
+<td>Dick Schallies, <a href="http://en.wikipedia.org/wiki/Willy_van_Hemert" title="Willy van Hemert">Willy van Hemert</a></td>
+<td><span style="display:none" class="sortkey">7001210000000000000</span>21</td>
+<td><span style="display:none" class="sortkey">7000500000000000000</span>5</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1960" title="Eurovision Song Contest 1960">1960</a></th>
+<td>29 March</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/United_Kingdom" title="United Kingdom"><img alt="United Kingdom" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/London" title="London">London</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_France.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/35px-Flag_of_France.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/45px-Flag_of_France.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/France_in_the_Eurovision_Song_Contest" title="France in the Eurovision Song Contest">France</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Tom_Pillibi" title="Tom Pillibi">Tom Pillibi</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Jacqueline_Boyer" title="Jacqueline Boyer">Jacqueline Boyer</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Andr%C3%A9_Popp" title="André Popp">André Popp</a>, <a href="http://en.wikipedia.org/wiki/Pierre_Cour" title="Pierre Cour">Pierre Cour</a></td>
+<td><span style="display:none" class="sortkey">7001320000000000000</span>32</td>
+<td><span style="display:none" class="sortkey">7000700000000000000</span>7</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1961" title="Eurovision Song Contest 1961">1961</a></th>
+<td>18 March</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/France" title="France"><img alt="France" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_France.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/35px-Flag_of_France.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/45px-Flag_of_France.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Cannes" title="Cannes">Cannes</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Luxembourg.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/35px-Flag_of_Luxembourg.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/46px-Flag_of_Luxembourg.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Luxembourg_in_the_Eurovision_Song_Contest" title="Luxembourg in the Eurovision Song Contest">Luxembourg</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Nous_les_amoureux" title="Nous les amoureux">Nous les amoureux</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Jean-Claude_Pascal" title="Jean-Claude Pascal">Jean-Claude Pascal</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Jacques_Datin" title="Jacques Datin">Jacques Datin</a>, Maurice Vidalin</td>
+<td><span style="display:none" class="sortkey">7001310000000000000</span>31</td>
+<td><span style="display:none" class="sortkey">7000600000000000000</span>6</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1962" title="Eurovision Song Contest 1962">1962</a></th>
+<td>18 March</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Luxembourg" title="Luxembourg"><img alt="Luxembourg" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Luxembourg.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/35px-Flag_of_Luxembourg.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/46px-Flag_of_Luxembourg.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Luxembourg_City" title="Luxembourg City" class="mw-redirect">Luxembourg</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_France.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/35px-Flag_of_France.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/45px-Flag_of_France.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/France_in_the_Eurovision_Song_Contest" title="France in the Eurovision Song Contest">France</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Un_premier_amour" title="Un premier amour">Un premier amour</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Isabelle_Aubret" title="Isabelle Aubret">Isabelle Aubret</a></td>
+<td>Claude-Henri Vic, Roland Stephane Valade</td>
+<td><span style="display:none" class="sortkey">7001260000000000000</span>26</td>
+<td><span style="display:none" class="sortkey">7001130000000000000</span>13</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/19px-Flag_of_Monaco.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/29px-Flag_of_Monaco.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/38px-Flag_of_Monaco.svg.png 2x" data-file-width="750" data-file-height="600" height="15" width="19">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Monaco_in_the_Eurovision_Song_Contest" title="Monaco in the Eurovision Song Contest">Monaco</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1963" title="Eurovision Song Contest 1963">1963</a></th>
+<td>23 March</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/United_Kingdom" title="United Kingdom"><img alt="United Kingdom" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/London" title="London">London</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/20px-Flag_of_Denmark.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/31px-Flag_of_Denmark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/40px-Flag_of_Denmark.svg.png 2x" data-file-width="370" data-file-height="280" height="15" width="20">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Denmark_in_the_Eurovision_Song_Contest" title="Denmark in the Eurovision Song Contest">Denmark</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Dansevise" title="Dansevise">Dansevise</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Grethe_and_J%C3%B8rgen_Ingmann" title="Grethe and Jørgen Ingmann">Grethe and Jørgen Ingmann</a></td>
+<td>Otto Francker, Sejr Volmer-Sørensen</td>
+<td><span style="display:none" class="sortkey">7001420000000000000</span>42</td>
+<td><span style="display:none" class="sortkey">7000200000000000000</span>2</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-Flag_of_Switzerland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/24px-Flag_of_Switzerland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/32px-Flag_of_Switzerland.svg.png 2x" data-file-width="1000" data-file-height="1000" height="16" width="16">&nbsp;&nbsp;</span><a href="http://en.wikipedia.org/wiki/Switzerland_in_the_Eurovision_Song_Contest" title="Switzerland in the Eurovision Song Contest">Switzerland</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1964" title="Eurovision Song Contest 1964">1964</a></th>
+<td>21 March</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Denmark" title="Denmark"><img alt="Denmark" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/20px-Flag_of_Denmark.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/31px-Flag_of_Denmark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/40px-Flag_of_Denmark.svg.png 2x" data-file-width="370" data-file-height="280" height="15" width="20"></a></span> <a href="http://en.wikipedia.org/wiki/Copenhagen" title="Copenhagen">Copenhagen</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Italy.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/35px-Flag_of_Italy.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/45px-Flag_of_Italy.svg.png 2x" data-file-width="1500" data-file-height="1000" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Italy_in_the_Eurovision_Song_Contest" title="Italy in the Eurovision Song Contest">Italy</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Non_ho_l%27et%C3%A0" title="Non ho l'età">Non ho l'età</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Gigliola_Cinquetti" title="Gigliola Cinquetti">Gigliola Cinquetti</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Nicola_Salerno" title="Nicola Salerno">Nicola Salerno</a>, Mario Pinzeri</td>
+<td><span style="display:none" class="sortkey">7001490000000000000</span>49</td>
+<td><span style="display:none" class="sortkey">7001320000000000000</span>32</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1965" title="Eurovision Song Contest 1965">1965</a></th>
+<td>20 March</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Italy" title="Italy"><img alt="Italy" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Italy.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/35px-Flag_of_Italy.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/45px-Flag_of_Italy.svg.png 2x" data-file-width="1500" data-file-height="1000" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Naples" title="Naples">Naples</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Luxembourg.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/35px-Flag_of_Luxembourg.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/46px-Flag_of_Luxembourg.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Luxembourg_in_the_Eurovision_Song_Contest" title="Luxembourg in the Eurovision Song Contest">Luxembourg</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Poup%C3%A9e_de_cire,_poup%C3%A9e_de_son" title="Poupée de cire, poupée de son">Poupée de cire, poupée de son</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/France_Gall" title="France Gall">France Gall</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Serge_Gainsbourg" title="Serge Gainsbourg">Serge Gainsbourg</a></td>
+<td><span style="display:none" class="sortkey">7001320000000000000</span>32</td>
+<td><span style="display:none" class="sortkey">7000600000000000000</span>6</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1966" title="Eurovision Song Contest 1966">1966</a></th>
+<td>5 March</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Luxembourg" title="Luxembourg"><img alt="Luxembourg" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Luxembourg.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/35px-Flag_of_Luxembourg.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/46px-Flag_of_Luxembourg.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Luxembourg_City" title="Luxembourg City" class="mw-redirect">Luxembourg</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Austria.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/35px-Flag_of_Austria.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/45px-Flag_of_Austria.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Austria_in_the_Eurovision_Song_Contest" title="Austria in the Eurovision Song Contest">Austria</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Merci,_Ch%C3%A9rie" title="Merci, Chérie">Merci, Chérie</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Udo_J%C3%BCrgens" title="Udo Jürgens">Udo Jürgens</a></td>
+<td>Udo Jürgens, Thomas Hörbiger</td>
+<td><span style="display:none" class="sortkey">7001310000000000000</span>31</td>
+<td><span style="display:none" class="sortkey">7001150000000000000</span>15</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Sweden.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/35px-Flag_of_Sweden.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/46px-Flag_of_Sweden.svg.png 2x" data-file-width="1600" data-file-height="1000" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Sweden_in_the_Eurovision_Song_Contest" title="Sweden in the Eurovision Song Contest">Sweden</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1967" title="Eurovision Song Contest 1967">1967</a></th>
+<td>8 April</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Austria" title="Austria"><img alt="Austria" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Austria.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/35px-Flag_of_Austria.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/45px-Flag_of_Austria.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Vienna" title="Vienna">Vienna</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Puppet_on_a_String" title="Puppet on a String">Puppet on a String</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Sandie_Shaw" title="Sandie Shaw">Sandie Shaw</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Bill_Martin_%28musician%29" title="Bill Martin (musician)">Bill Martin</a>, <a href="http://en.wikipedia.org/wiki/Phil_Coulter" title="Phil Coulter">Phil Coulter</a></td>
+<td><span style="display:none" class="sortkey">7001470000000000000</span>47</td>
+<td><span style="display:none" class="sortkey">7001250000000000000</span>25</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Ireland_in_the_Eurovision_Song_Contest" title="Ireland in the Eurovision Song Contest">Ireland</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1968" title="Eurovision Song Contest 1968">1968</a></th>
+<td>6 April</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/United_Kingdom" title="United Kingdom"><img alt="United Kingdom" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/London" title="London">London</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Spain_1945_-_1977.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_Spain_%281945_-_1977%29.svg/35px-Flag_of_Spain_%281945_-_1977%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_Spain_%281945_-_1977%29.svg/45px-Flag_of_Spain_%281945_-_1977%29.svg.png 2x" data-file-width="750" data-file-height="500" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Spain_in_the_Eurovision_Song_Contest" title="Spain in the Eurovision Song Contest">Spain</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/La,_la,_la" title="La, la, la">La, la, la</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Massiel" title="Massiel">Massiel</a></td>
+<td><a href="http://en.wikipedia.org/wiki/D%C3%BAo_Din%C3%A1mico" title="Dúo Dinámico">Manuel de la Calva, Ramón Arcusa</a></td>
+<td><span style="display:none" class="sortkey">7001290000000000000</span>29</td>
+<td><span style="display:none" class="sortkey">7000100000000000000</span>1</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left" rowspan="4"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1969" title="Eurovision Song Contest 1969">1969</a></th>
+<td rowspan="4">29 March</td>
+<td rowspan="4"><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Spain" title="Spain"><img alt="Spain" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Spain_1945_-_1977.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_Spain_%281945_-_1977%29.svg/35px-Flag_of_Spain_%281945_-_1977%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_Spain_%281945_-_1977%29.svg/45px-Flag_of_Spain_%281945_-_1977%29.svg.png 2x" data-file-width="750" data-file-height="500" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Madrid" title="Madrid">Madrid</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Spain_1945_-_1977.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_Spain_%281945_-_1977%29.svg/35px-Flag_of_Spain_%281945_-_1977%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_Spain_%281945_-_1977%29.svg/45px-Flag_of_Spain_%281945_-_1977%29.svg.png 2x" data-file-width="750" data-file-height="500" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Spain_in_the_Eurovision_Song_Contest" title="Spain in the Eurovision Song Contest">Spain</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Vivo_cantando" title="Vivo cantando">Vivo cantando</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Salom%C3%A9_%28singer%29" title="Salomé (singer)">Salomé</a></td>
+<td>Maria José de Cerato, Aniano Alcalde</td>
+<td rowspan="4"><span style="display:none" class="sortkey">7001180000000000000</span>18</td>
+<td colspan="2" rowspan="4">
+<center><i>No runner-up<br>
+(4 winners)</i></center>
+</td>
+</tr>
+<tr>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Boom_Bang-a-Bang" title="Boom Bang-a-Bang">Boom Bang-a-Bang</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Lulu_%28singer%29" title="Lulu (singer)">Lulu</a></td>
+<td>Alan Moorhouse, Peter Warne</td>
+</tr>
+<tr>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_Netherlands.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/35px-Flag_of_the_Netherlands.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/45px-Flag_of_the_Netherlands.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Netherlands_in_the_Eurovision_Song_Contest" title="Netherlands in the Eurovision Song Contest">Netherlands</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/De_troubadour" title="De troubadour">De troubadour</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Lenny_Kuhr" title="Lenny Kuhr">Lenny Kuhr</a></td>
+<td>Lenny Kuhr, David Hartsema</td>
+</tr>
+<tr>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_France.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/35px-Flag_of_France.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/45px-Flag_of_France.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/France_in_the_Eurovision_Song_Contest" title="France in the Eurovision Song Contest">France</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Un_jour,_un_enfant" title="Un jour, un enfant">Un jour, un enfant</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Frida_Boccara" title="Frida Boccara">Frida Boccara</a></td>
+<td>Émile Stern, <a href="http://en.wikipedia.org/wiki/Eddy_Marnay" title="Eddy Marnay">Eddy Marnay</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1970" title="Eurovision Song Contest 1970">1970</a></th>
+<td>21 March</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Netherlands" title="Netherlands"><img alt="Netherlands" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_Netherlands.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/35px-Flag_of_the_Netherlands.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/45px-Flag_of_the_Netherlands.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Amsterdam" title="Amsterdam">Amsterdam</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Ireland_in_the_Eurovision_Song_Contest" title="Ireland in the Eurovision Song Contest">Ireland</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/All_Kinds_of_Everything" title="All Kinds of Everything">All Kinds of Everything</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Dana_Rosemary_Scallon" title="Dana Rosemary Scallon">Dana</a></td>
+<td>Derry Lindsay, Jackie Smith</td>
+<td><span style="display:none" class="sortkey">7001320000000000000</span>32</td>
+<td><span style="display:none" class="sortkey">7000600000000000000</span>6</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1971" title="Eurovision Song Contest 1971">1971</a></th>
+<td>3 April</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Republic_of_Ireland" title="Republic of Ireland"><img alt="Republic of Ireland" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Dublin" title="Dublin">Dublin</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/19px-Flag_of_Monaco.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/29px-Flag_of_Monaco.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/38px-Flag_of_Monaco.svg.png 2x" data-file-width="750" data-file-height="600" height="15" width="19">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Monaco_in_the_Eurovision_Song_Contest" title="Monaco in the Eurovision Song Contest">Monaco</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Un_banc,_un_arbre,_une_rue" title="Un banc, un arbre, une rue">Un banc, un arbre, une rue</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/S%C3%A9verine_%28singer%29" title="Séverine (singer)">Séverine</a></td>
+<td>Jean-Pierre Bourtayre, Yves Dessca</td>
+<td>128</td>
+<td><span style="display:none" class="sortkey">7001120000000000000</span>12</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Spain_1945_-_1977.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_Spain_%281945_-_1977%29.svg/35px-Flag_of_Spain_%281945_-_1977%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_Spain_%281945_-_1977%29.svg/45px-Flag_of_Spain_%281945_-_1977%29.svg.png 2x" data-file-width="750" data-file-height="500" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Spain_in_the_Eurovision_Song_Contest" title="Spain in the Eurovision Song Contest">Spain</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1972" title="Eurovision Song Contest 1972">1972</a></th>
+<td>25 March</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/United_Kingdom" title="United Kingdom"><img alt="United Kingdom" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Edinburgh" title="Edinburgh">Edinburgh</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Luxembourg.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/35px-Flag_of_Luxembourg.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/46px-Flag_of_Luxembourg.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Luxembourg_in_the_Eurovision_Song_Contest" title="Luxembourg in the Eurovision Song Contest">Luxembourg</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Apr%C3%A8s_toi" title="Après toi">Après toi</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Vicky_Leandros" title="Vicky Leandros">Vicky Leandros</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Mario_Panas" title="Mario Panas" class="mw-redirect">Mario Panas</a>, Klaus Munro, Yves Dessca</td>
+<td>128</td>
+<td><span style="display:none" class="sortkey">7001140000000000000</span>14</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1973" title="Eurovision Song Contest 1973">1973</a></th>
+<td>7 April</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Luxembourg" title="Luxembourg"><img alt="Luxembourg" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Luxembourg.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/35px-Flag_of_Luxembourg.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/46px-Flag_of_Luxembourg.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Luxembourg_City" title="Luxembourg City" class="mw-redirect">Luxembourg</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Luxembourg.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/35px-Flag_of_Luxembourg.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/46px-Flag_of_Luxembourg.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Luxembourg_in_the_Eurovision_Song_Contest" title="Luxembourg in the Eurovision Song Contest">Luxembourg</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Tu_te_reconna%C3%AEtras" title="Tu te reconnaîtras">Tu te reconnaîtras</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Anne-Marie_David" title="Anne-Marie David">Anne-Marie David</a></td>
+<td>Claude Morgan, Vline Buggy</td>
+<td>129</td>
+<td><span style="display:none" class="sortkey">7000400000000000000</span>4</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Spain_1945_-_1977.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_Spain_%281945_-_1977%29.svg/35px-Flag_of_Spain_%281945_-_1977%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_Spain_%281945_-_1977%29.svg/45px-Flag_of_Spain_%281945_-_1977%29.svg.png 2x" data-file-width="750" data-file-height="500" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Spain_in_the_Eurovision_Song_Contest" title="Spain in the Eurovision Song Contest">Spain</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1974" title="Eurovision Song Contest 1974">1974</a></th>
+<td>6 April</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/United_Kingdom" title="United Kingdom"><img alt="United Kingdom" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Brighton" title="Brighton">Brighton</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Sweden.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/35px-Flag_of_Sweden.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/46px-Flag_of_Sweden.svg.png 2x" data-file-width="1600" data-file-height="1000" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Sweden_in_the_Eurovision_Song_Contest" title="Sweden in the Eurovision Song Contest">Sweden</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Waterloo_%28ABBA_song%29" title="Waterloo (ABBA song)">Waterloo</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/ABBA" title="ABBA">ABBA</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Benny_Andersson" title="Benny Andersson">Benny Andersson</a>, <a href="http://en.wikipedia.org/wiki/Bj%C3%B6rn_Ulvaeus" title="Björn Ulvaeus">Björn Ulvaeus</a>, <a href="http://en.wikipedia.org/wiki/Stig_Anderson" title="Stig Anderson">Stig Anderson</a></td>
+<td><span style="display:none" class="sortkey">7001240000000000000</span>24</td>
+<td><span style="display:none" class="sortkey">7000600000000000000</span>6</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Italy.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/35px-Flag_of_Italy.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/45px-Flag_of_Italy.svg.png 2x" data-file-width="1500" data-file-height="1000" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Italy_in_the_Eurovision_Song_Contest" title="Italy in the Eurovision Song Contest">Italy</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1975" title="Eurovision Song Contest 1975">1975</a></th>
+<td>22 March</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Sweden" title="Sweden"><img alt="Sweden" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Sweden.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/35px-Flag_of_Sweden.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/46px-Flag_of_Sweden.svg.png 2x" data-file-width="1600" data-file-height="1000" height="14" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Stockholm" title="Stockholm">Stockholm</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_Netherlands.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/35px-Flag_of_the_Netherlands.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/45px-Flag_of_the_Netherlands.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Netherlands_in_the_Eurovision_Song_Contest" title="Netherlands in the Eurovision Song Contest">Netherlands</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Ding-a-dong" title="Ding-a-dong">Ding-a-dong</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Teach-In_%28band%29" title="Teach-In (band)">Teach-In</a></td>
+<td>Dick Bakker, <a href="http://en.wikipedia.org/wiki/Eddy_Ouwens" title="Eddy Ouwens">Eddy Ouwens</a>, Will Luikinga</td>
+<td>152</td>
+<td><span style="display:none" class="sortkey">7001140000000000000</span>14</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1976" title="Eurovision Song Contest 1976">1976</a></th>
+<td>3 April</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Netherlands" title="Netherlands"><img alt="Netherlands" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_Netherlands.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/35px-Flag_of_the_Netherlands.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/45px-Flag_of_the_Netherlands.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/The_Hague" title="The Hague">The Hague</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Save_Your_Kisses_for_Me" title="Save Your Kisses for Me">Save Your Kisses for Me</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Brotherhood_of_Man_%28band%29" title="Brotherhood of Man (band)" class="mw-redirect">Brotherhood of Man</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Tony_Hiller" title="Tony Hiller">Tony Hiller</a>, <a href="http://en.wikipedia.org/wiki/Lee_Sheriden" title="Lee Sheriden">Lee Sheriden</a>, <a href="http://en.wikipedia.org/wiki/Martin_Lee_%28singer%29" title="Martin Lee (singer)">Martin Lee</a></td>
+<td>164</td>
+<td><span style="display:none" class="sortkey">7001170000000000000</span>17</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_France.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/35px-Flag_of_France.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/45px-Flag_of_France.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/France_in_the_Eurovision_Song_Contest" title="France in the Eurovision Song Contest">France</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1977" title="Eurovision Song Contest 1977">1977</a></th>
+<td>7 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/United_Kingdom" title="United Kingdom"><img alt="United Kingdom" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/London" title="London">London</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_France.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/35px-Flag_of_France.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/45px-Flag_of_France.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/France_in_the_Eurovision_Song_Contest" title="France in the Eurovision Song Contest">France</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/L%27oiseau_et_l%27enfant" title="L'oiseau et l'enfant">L'oiseau et l'enfant</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Marie_Myriam" title="Marie Myriam">Marie Myriam</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Jean_Paul_Cara" title="Jean Paul Cara">Jean Paul Cara</a>, Joe Gracy</td>
+<td>136</td>
+<td><span style="display:none" class="sortkey">7001150000000000000</span>15</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1978" title="Eurovision Song Contest 1978">1978</a></th>
+<td>22 April</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/France" title="France"><img alt="France" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_France.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/35px-Flag_of_France.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/45px-Flag_of_France.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Paris" title="Paris">Paris</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/21px-Flag_of_Israel.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/32px-Flag_of_Israel.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/41px-Flag_of_Israel.svg.png 2x" data-file-width="660" data-file-height="480" height="15" width="21">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Israel_in_the_Eurovision_Song_Contest" title="Israel in the Eurovision Song Contest">Israel</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/A-Ba-Ni-Bi" title="A-Ba-Ni-Bi">A-Ba-Ni-Bi</a>" (א-ב-ני-בי)</td>
+<td><a href="http://en.wikipedia.org/wiki/Izhar_Cohen" title="Izhar Cohen">Izhar Cohen</a> and the <a href="http://en.wikipedia.org/wiki/Alphabeta" title="Alphabeta">Alphabeta</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Nurit_Hirsh" title="Nurit Hirsh">Nurit Hirsh</a>, <a href="http://en.wikipedia.org/wiki/Ehud_Manor" title="Ehud Manor">Ehud Manor</a></td>
+<td>157</td>
+<td><span style="display:none" class="sortkey">7001320000000000000</span>32</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Belgium_civil.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Belgium_%28civil%29.svg/35px-Flag_of_Belgium_%28civil%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Belgium_%28civil%29.svg/45px-Flag_of_Belgium_%28civil%29.svg.png 2x" data-file-width="450" data-file-height="300" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Belgium_in_the_Eurovision_Song_Contest" title="Belgium in the Eurovision Song Contest">Belgium</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1979" title="Eurovision Song Contest 1979">1979</a></th>
+<td>31 March</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Israel" title="Israel"><img alt="Israel" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/21px-Flag_of_Israel.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/32px-Flag_of_Israel.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/41px-Flag_of_Israel.svg.png 2x" data-file-width="660" data-file-height="480" height="15" width="21"></a></span> <a href="http://en.wikipedia.org/wiki/Jerusalem" title="Jerusalem">Jerusalem</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/21px-Flag_of_Israel.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/32px-Flag_of_Israel.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/41px-Flag_of_Israel.svg.png 2x" data-file-width="660" data-file-height="480" height="15" width="21">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Israel_in_the_Eurovision_Song_Contest" title="Israel in the Eurovision Song Contest">Israel</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Hallelujah_%28Gali_Atari_and_Milk_%26_Honey_song%29" title="Hallelujah (Gali Atari and Milk &amp; Honey song)">Hallelujah</a>" (הללויה)</td>
+<td><a href="http://en.wikipedia.org/wiki/Gali_Atari" title="Gali Atari">Gali Atari</a> and <a href="http://en.wikipedia.org/wiki/Milk_and_Honey_%28group%29" title="Milk and Honey (group)">Milk and Honey</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Kobi_Oshrat" title="Kobi Oshrat">Kobi Oshrat</a>, Shimrit Orr</td>
+<td>125</td>
+<td><span style="display:none" class="sortkey">7000900000000000000</span>9</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Spain_1977_-_1981.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Flag_of_Spain_%281977_-_1981%29.svg/35px-Flag_of_Spain_%281977_-_1981%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Flag_of_Spain_%281977_-_1981%29.svg/45px-Flag_of_Spain_%281977_-_1981%29.svg.png 2x" data-file-width="750" data-file-height="500" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Spain_in_the_Eurovision_Song_Contest" title="Spain in the Eurovision Song Contest">Spain</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1980" title="Eurovision Song Contest 1980">1980</a></th>
+<td>19 April</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Netherlands" title="Netherlands"><img alt="Netherlands" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_Netherlands.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/35px-Flag_of_the_Netherlands.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/45px-Flag_of_the_Netherlands.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/The_Hague" title="The Hague">The Hague</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Ireland_in_the_Eurovision_Song_Contest" title="Ireland in the Eurovision Song Contest">Ireland</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/What%27s_Another_Year" title="What's Another Year">What's Another Year</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Johnny_Logan_%28singer%29" title="Johnny Logan (singer)">Johnny Logan</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Shay_Healy" title="Shay Healy">Shay Healy</a></td>
+<td>143</td>
+<td><span style="display:none" class="sortkey">7001150000000000000</span>15</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Germany.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/35px-Flag_of_Germany.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/46px-Flag_of_Germany.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Germany_in_the_Eurovision_Song_Contest" title="Germany in the Eurovision Song Contest">Germany</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1981" title="Eurovision Song Contest 1981">1981</a></th>
+<td>4 April</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Republic_of_Ireland" title="Republic of Ireland"><img alt="Republic of Ireland" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Dublin" title="Dublin">Dublin</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Making_Your_Mind_Up" title="Making Your Mind Up">Making Your Mind Up</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Bucks_Fizz_%28band%29" title="Bucks Fizz (band)">Bucks Fizz</a></td>
+<td>John Danter, <a href="http://en.wikipedia.org/wiki/Andy_Hill_%28composer%29" title="Andy Hill (composer)">Andy Hill</a></td>
+<td>136</td>
+<td><span style="display:none" class="sortkey">7000400000000000000</span>4</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Germany.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/35px-Flag_of_Germany.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/46px-Flag_of_Germany.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Germany_in_the_Eurovision_Song_Contest" title="Germany in the Eurovision Song Contest">Germany</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1982" title="Eurovision Song Contest 1982">1982</a></th>
+<td>24 April</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/United_Kingdom" title="United Kingdom"><img alt="United Kingdom" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Harrogate" title="Harrogate">Harrogate</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Germany.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/35px-Flag_of_Germany.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/46px-Flag_of_Germany.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Germany_in_the_Eurovision_Song_Contest" title="Germany in the Eurovision Song Contest">Germany</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Ein_bi%C3%9Fchen_Frieden" title="Ein bißchen Frieden">Ein bißchen Frieden</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Nicole_%28German_singer%29" title="Nicole (German singer)">Nicole</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Ralph_Siegel_%28songwriter%29" title="Ralph Siegel (songwriter)" class="mw-redirect">Ralph Siegel</a>, <a href="http://en.wikipedia.org/wiki/Bernd_Meinunger" title="Bernd Meinunger">Bernd Meinunger</a></td>
+<td>161</td>
+<td><span style="display:none" class="sortkey">7001610000000000000</span>61</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/21px-Flag_of_Israel.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/32px-Flag_of_Israel.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/41px-Flag_of_Israel.svg.png 2x" data-file-width="660" data-file-height="480" height="15" width="21">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Israel_in_the_Eurovision_Song_Contest" title="Israel in the Eurovision Song Contest">Israel</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1983" title="Eurovision Song Contest 1983">1983</a></th>
+<td>23 April</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Germany" title="Germany"><img alt="Germany" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Germany.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/35px-Flag_of_Germany.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/46px-Flag_of_Germany.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Munich" title="Munich">Munich</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Luxembourg.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/35px-Flag_of_Luxembourg.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/46px-Flag_of_Luxembourg.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Luxembourg_in_the_Eurovision_Song_Contest" title="Luxembourg in the Eurovision Song Contest">Luxembourg</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Si_la_vie_est_cadeau" title="Si la vie est cadeau">Si la vie est cadeau</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Corinne_Herm%C3%A8s" title="Corinne Hermès">Corinne Hermès</a></td>
+<td>Jean-Pierre Millers, Alain Garcia</td>
+<td>142</td>
+<td><span style="display:none" class="sortkey">7000600000000000000</span>6</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/21px-Flag_of_Israel.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/32px-Flag_of_Israel.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/41px-Flag_of_Israel.svg.png 2x" data-file-width="660" data-file-height="480" height="15" width="21">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Israel_in_the_Eurovision_Song_Contest" title="Israel in the Eurovision Song Contest">Israel</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1984" title="Eurovision Song Contest 1984">1984</a></th>
+<td>5 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Luxembourg" title="Luxembourg"><img alt="Luxembourg" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Luxembourg.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/35px-Flag_of_Luxembourg.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/46px-Flag_of_Luxembourg.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Luxembourg_City" title="Luxembourg City" class="mw-redirect">Luxembourg</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Sweden.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/35px-Flag_of_Sweden.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/46px-Flag_of_Sweden.svg.png 2x" data-file-width="1600" data-file-height="1000" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Sweden_in_the_Eurovision_Song_Contest" title="Sweden in the Eurovision Song Contest">Sweden</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Diggi-Loo_Diggi-Ley" title="Diggi-Loo Diggi-Ley">Diggi-Loo Diggi-Ley</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Herreys" title="Herreys">Herreys</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Torgny_S%C3%B6derberg" title="Torgny Söderberg">Torgny Söderberg</a>, Britt Lindeborg</td>
+<td>145</td>
+<td><span style="display:none" class="sortkey">7000800000000000000</span>8</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Ireland_in_the_Eurovision_Song_Contest" title="Ireland in the Eurovision Song Contest">Ireland</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1985" title="Eurovision Song Contest 1985">1985</a></th>
+<td>4 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Sweden" title="Sweden"><img alt="Sweden" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Sweden.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/35px-Flag_of_Sweden.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/46px-Flag_of_Sweden.svg.png 2x" data-file-width="1600" data-file-height="1000" height="14" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Gothenburg" title="Gothenburg">Gothenburg</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/21px-Flag_of_Norway.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/32px-Flag_of_Norway.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/41px-Flag_of_Norway.svg.png 2x" data-file-width="1100" data-file-height="800" height="15" width="21">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Norway_in_the_Eurovision_Song_Contest" title="Norway in the Eurovision Song Contest">Norway</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/La_det_swinge" title="La det swinge">La det swinge</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Bobbysocks%21" title="Bobbysocks!">Bobbysocks!</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Rolf_L%C3%B8vland" title="Rolf Løvland">Rolf Løvland</a></td>
+<td>123</td>
+<td><span style="display:none" class="sortkey">7001180000000000000</span>18</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Germany.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/35px-Flag_of_Germany.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/46px-Flag_of_Germany.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Germany_in_the_Eurovision_Song_Contest" title="Germany in the Eurovision Song Contest">Germany</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1986" title="Eurovision Song Contest 1986">1986</a></th>
+<td>3 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Norway" title="Norway"><img alt="Norway" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/21px-Flag_of_Norway.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/32px-Flag_of_Norway.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/41px-Flag_of_Norway.svg.png 2x" data-file-width="1100" data-file-height="800" height="15" width="21"></a></span> <a href="http://en.wikipedia.org/wiki/Bergen" title="Bergen">Bergen</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Belgium_civil.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Belgium_%28civil%29.svg/35px-Flag_of_Belgium_%28civil%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Belgium_%28civil%29.svg/45px-Flag_of_Belgium_%28civil%29.svg.png 2x" data-file-width="450" data-file-height="300" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Belgium_in_the_Eurovision_Song_Contest" title="Belgium in the Eurovision Song Contest">Belgium</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/J%27aime_la_vie" title="J'aime la vie">J'aime la vie</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Sandra_Kim" title="Sandra Kim">Sandra Kim</a></td>
+<td>Jean-Paul Furnémont, Angelo Crisci, Rosario Marino Atria</td>
+<td>176</td>
+<td><span style="display:none" class="sortkey">7001360000000000000</span>36</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-Flag_of_Switzerland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/24px-Flag_of_Switzerland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/32px-Flag_of_Switzerland.svg.png 2x" data-file-width="1000" data-file-height="1000" height="16" width="16">&nbsp;&nbsp;</span><a href="http://en.wikipedia.org/wiki/Switzerland_in_the_Eurovision_Song_Contest" title="Switzerland in the Eurovision Song Contest">Switzerland</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1987" title="Eurovision Song Contest 1987">1987</a></th>
+<td>9 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Belgium" title="Belgium"><img alt="Belgium" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Belgium_civil.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Belgium_%28civil%29.svg/35px-Flag_of_Belgium_%28civil%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Belgium_%28civil%29.svg/45px-Flag_of_Belgium_%28civil%29.svg.png 2x" data-file-width="450" data-file-height="300" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Brussels" title="Brussels">Brussels</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Ireland_in_the_Eurovision_Song_Contest" title="Ireland in the Eurovision Song Contest">Ireland</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Hold_Me_Now_%28Johnny_Logan_song%29" title="Hold Me Now (Johnny Logan song)">Hold Me Now</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Johnny_Logan_%28singer%29" title="Johnny Logan (singer)">Johnny Logan</a></td>
+<td>Johnny Logan</td>
+<td>172</td>
+<td><span style="display:none" class="sortkey">7001310000000000000</span>31</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Germany.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/35px-Flag_of_Germany.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/46px-Flag_of_Germany.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Germany_in_the_Eurovision_Song_Contest" title="Germany in the Eurovision Song Contest">Germany</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1988" title="Eurovision Song Contest 1988">1988</a></th>
+<td>30 April</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Republic_of_Ireland" title="Republic of Ireland"><img alt="Republic of Ireland" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Dublin" title="Dublin">Dublin</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-Flag_of_Switzerland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/24px-Flag_of_Switzerland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/32px-Flag_of_Switzerland.svg.png 2x" data-file-width="1000" data-file-height="1000" height="16" width="16">&nbsp;&nbsp;</span><a href="http://en.wikipedia.org/wiki/Switzerland_in_the_Eurovision_Song_Contest" title="Switzerland in the Eurovision Song Contest">Switzerland</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Ne_partez_pas_sans_moi" title="Ne partez pas sans moi">Ne partez pas sans moi</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Celine_Dion" title="Celine Dion">Celine Dion</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Atilla_%C5%9Eereftu%C4%9F" title="Atilla Şereftuğ">Atilla Şereftuğ</a>, <a href="http://en.wikipedia.org/wiki/Nella_Martinetti" title="Nella Martinetti">Nella Martinetti</a></td>
+<td>137</td>
+<td><span style="display:none" class="sortkey">7000100000000000000</span>1</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1989" title="Eurovision Song Contest 1989">1989</a></th>
+<td>6 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Switzerland" title="Switzerland"><img alt="Switzerland" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/16px-Flag_of_Switzerland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/24px-Flag_of_Switzerland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/32px-Flag_of_Switzerland.svg.png 2x" data-file-width="1000" data-file-height="1000" height="16" width="16"></a></span> <a href="http://en.wikipedia.org/wiki/Lausanne" title="Lausanne">Lausanne</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_SFR_Yugoslavia.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_SFR_Yugoslavia.svg/35px-Flag_of_SFR_Yugoslavia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_SFR_Yugoslavia.svg/46px-Flag_of_SFR_Yugoslavia.svg.png 2x" data-file-width="600" data-file-height="300" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Yugoslavia_in_the_Eurovision_Song_Contest" title="Yugoslavia in the Eurovision Song Contest">Yugoslavia</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Rock_Me_%28Riva_song%29" title="Rock Me (Riva song)">Rock Me</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Riva_%28music_group%29" title="Riva (music group)" class="mw-redirect">Riva</a></td>
+<td>Rajko Dujmić, Stevo Cvikić</td>
+<td>137</td>
+<td><span style="display:none" class="sortkey">7000700000000000000</span>7</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1990" title="Eurovision Song Contest 1990">1990</a></th>
+<td>5 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Socialist_Federal_Republic_of_Yugoslavia" title="Socialist Federal Republic of Yugoslavia"><img alt="Socialist Federal Republic of Yugoslavia" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_SFR_Yugoslavia.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_SFR_Yugoslavia.svg/35px-Flag_of_SFR_Yugoslavia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_SFR_Yugoslavia.svg/46px-Flag_of_SFR_Yugoslavia.svg.png 2x" data-file-width="600" data-file-height="300" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Zagreb" title="Zagreb">Zagreb</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Italy.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/35px-Flag_of_Italy.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/45px-Flag_of_Italy.svg.png 2x" data-file-width="1500" data-file-height="1000" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Italy_in_the_Eurovision_Song_Contest" title="Italy in the Eurovision Song Contest">Italy</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Insieme:_1992" title="Insieme: 1992">Insieme: 1992</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Toto_Cutugno" title="Toto Cutugno">Toto Cutugno</a></td>
+<td>Toto Cutugno</td>
+<td>149</td>
+<td><span style="display:none" class="sortkey">7001170000000000000</span>17</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Ireland_in_the_Eurovision_Song_Contest" title="Ireland in the Eurovision Song Contest">Ireland</a><br>
+<span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_France.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/35px-Flag_of_France.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/45px-Flag_of_France.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/France_in_the_Eurovision_Song_Contest" title="France in the Eurovision Song Contest">France</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1991" title="Eurovision Song Contest 1991">1991</a></th>
+<td>4 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Italy" title="Italy"><img alt="Italy" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Italy.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/35px-Flag_of_Italy.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/45px-Flag_of_Italy.svg.png 2x" data-file-width="1500" data-file-height="1000" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Rome" title="Rome">Rome</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Sweden.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/35px-Flag_of_Sweden.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/46px-Flag_of_Sweden.svg.png 2x" data-file-width="1600" data-file-height="1000" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Sweden_in_the_Eurovision_Song_Contest" title="Sweden in the Eurovision Song Contest">Sweden</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/F%C3%A5ngad_av_en_stormvind" title="Fångad av en stormvind">Fångad av en stormvind</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Carola_H%C3%A4ggkvist" title="Carola Häggkvist">Carola</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Stephan_Berg" title="Stephan Berg">Stephan Berg</a></td>
+<td>146</td>
+<td><span style="display:none" class="sortkey">5000000000000000000</span>0</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_France.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/35px-Flag_of_France.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/45px-Flag_of_France.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/France_in_the_Eurovision_Song_Contest" title="France in the Eurovision Song Contest">France</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1992" title="Eurovision Song Contest 1992">1992</a></th>
+<td>9 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Sweden" title="Sweden"><img alt="Sweden" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Sweden.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/35px-Flag_of_Sweden.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/46px-Flag_of_Sweden.svg.png 2x" data-file-width="1600" data-file-height="1000" height="14" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Malm%C3%B6" title="Malmö">Malmö</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Ireland_in_the_Eurovision_Song_Contest" title="Ireland in the Eurovision Song Contest">Ireland</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Why_Me%3F_%28Linda_Martin_song%29" title="Why Me? (Linda Martin song)">Why Me</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Linda_Martin" title="Linda Martin">Linda Martin</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Johnny_Logan_%28singer%29" title="Johnny Logan (singer)">Johnny Logan</a></td>
+<td>155</td>
+<td><span style="display:none" class="sortkey">7001160000000000000</span>16</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1993" title="Eurovision Song Contest 1993">1993</a></th>
+<td>15 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Republic_of_Ireland" title="Republic of Ireland"><img alt="Republic of Ireland" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Millstreet" title="Millstreet">Millstreet</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Ireland_in_the_Eurovision_Song_Contest" title="Ireland in the Eurovision Song Contest">Ireland</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/In_Your_Eyes_%28Niamh_Kavanagh_song%29" title="In Your Eyes (Niamh Kavanagh song)">In Your Eyes</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Niamh_Kavanagh" title="Niamh Kavanagh">Niamh Kavanagh</a></td>
+<td>Jimmy Walsh</td>
+<td>187</td>
+<td><span style="display:none" class="sortkey">7001230000000000000</span>23</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1994" title="Eurovision Song Contest 1994">1994</a></th>
+<td>30 April</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Republic_of_Ireland" title="Republic of Ireland"><img alt="Republic of Ireland" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Dublin" title="Dublin">Dublin</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Ireland_in_the_Eurovision_Song_Contest" title="Ireland in the Eurovision Song Contest">Ireland</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Rock_%27n%27_Roll_Kids" title="Rock 'n' Roll Kids">Rock 'n' Roll Kids</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Paul_Harrington_%28musician%29" title="Paul Harrington (musician)">Paul Harrington</a> and <a href="http://en.wikipedia.org/wiki/Charlie_McGettigan" title="Charlie McGettigan">Charlie McGettigan</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Brendan_Graham" title="Brendan Graham">Brendan J. Graham</a></td>
+<td>226</td>
+<td><span style="display:none" class="sortkey">7001600000000000000</span>60</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Poland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/35px-Flag_of_Poland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/46px-Flag_of_Poland.svg.png 2x" data-file-width="1280" data-file-height="800" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Poland_in_the_Eurovision_Song_Contest" title="Poland in the Eurovision Song Contest">Poland</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1995" title="Eurovision Song Contest 1995">1995</a></th>
+<td>13 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Republic_of_Ireland" title="Republic of Ireland"><img alt="Republic of Ireland" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Dublin" title="Dublin">Dublin</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/21px-Flag_of_Norway.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/32px-Flag_of_Norway.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/41px-Flag_of_Norway.svg.png 2x" data-file-width="1100" data-file-height="800" height="15" width="21">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Norway_in_the_Eurovision_Song_Contest" title="Norway in the Eurovision Song Contest">Norway</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Nocturne_%28Secret_Garden_song%29" title="Nocturne (Secret Garden song)">Nocturne</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Secret_Garden_%28duo%29" title="Secret Garden (duo)">Secret Garden</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Rolf_L%C3%B8vland" title="Rolf Løvland">Rolf Løvland</a>, Petter Skavland</td>
+<td>148</td>
+<td><span style="display:none" class="sortkey">7001290000000000000</span>29</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Spain.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/35px-Flag_of_Spain.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/45px-Flag_of_Spain.svg.png 2x" data-file-width="750" data-file-height="500" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Spain_in_the_Eurovision_Song_Contest" title="Spain in the Eurovision Song Contest">Spain</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1996" title="Eurovision Song Contest 1996">1996</a></th>
+<td>18 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Norway" title="Norway"><img alt="Norway" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/21px-Flag_of_Norway.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/32px-Flag_of_Norway.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/41px-Flag_of_Norway.svg.png 2x" data-file-width="1100" data-file-height="800" height="15" width="21"></a></span> <a href="http://en.wikipedia.org/wiki/Oslo" title="Oslo">Oslo</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Ireland_in_the_Eurovision_Song_Contest" title="Ireland in the Eurovision Song Contest">Ireland</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/The_Voice_%28Eimear_Quinn_song%29" title="The Voice (Eimear Quinn song)">The Voice</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Eimear_Quinn" title="Eimear Quinn">Eimear Quinn</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Brendan_Graham" title="Brendan Graham">Brendan J. Graham</a></td>
+<td>162</td>
+<td><span style="display:none" class="sortkey">7001480000000000000</span>48</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/21px-Flag_of_Norway.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/32px-Flag_of_Norway.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/41px-Flag_of_Norway.svg.png 2x" data-file-width="1100" data-file-height="800" height="15" width="21">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Norway_in_the_Eurovision_Song_Contest" title="Norway in the Eurovision Song Contest">Norway</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1997" title="Eurovision Song Contest 1997">1997</a></th>
+<td>3 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Republic_of_Ireland" title="Republic of Ireland"><img alt="Republic of Ireland" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Dublin" title="Dublin">Dublin</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Love_Shine_a_Light" title="Love Shine a Light">Love Shine a Light</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Katrina_and_the_Waves" title="Katrina and the Waves">Katrina and the Waves</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Kimberley_Rew" title="Kimberley Rew">Kimberley Rew</a></td>
+<td>227</td>
+<td><span style="display:none" class="sortkey">7001700000000000000</span>70</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ireland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/35px-Flag_of_Ireland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/46px-Flag_of_Ireland.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Ireland_in_the_Eurovision_Song_Contest" title="Ireland in the Eurovision Song Contest">Ireland</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1998" title="Eurovision Song Contest 1998">1998</a></th>
+<td>9 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/United_Kingdom" title="United Kingdom"><img alt="United Kingdom" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Birmingham" title="Birmingham">Birmingham</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/21px-Flag_of_Israel.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/32px-Flag_of_Israel.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/41px-Flag_of_Israel.svg.png 2x" data-file-width="660" data-file-height="480" height="15" width="21">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Israel_in_the_Eurovision_Song_Contest" title="Israel in the Eurovision Song Contest">Israel</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Diva_%28Dana_International_song%29" title="Diva (Dana International song)">Diva</a>" (דיווה)</td>
+<td><a href="http://en.wikipedia.org/wiki/Dana_International" title="Dana International">Dana International</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Svika_Pick" title="Svika Pick">Svika Pick</a>, Yoav Ginai</td>
+<td>172</td>
+<td><span style="display:none" class="sortkey">7000600000000000000</span>6</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_United_Kingdom.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/35px-Flag_of_the_United_Kingdom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/46px-Flag_of_the_United_Kingdom.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom_in_the_Eurovision_Song_Contest" title="United Kingdom in the Eurovision Song Contest">United Kingdom</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_1999" title="Eurovision Song Contest 1999">1999</a></th>
+<td>29 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Israel" title="Israel"><img alt="Israel" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/21px-Flag_of_Israel.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/32px-Flag_of_Israel.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/41px-Flag_of_Israel.svg.png 2x" data-file-width="660" data-file-height="480" height="15" width="21"></a></span> <a href="http://en.wikipedia.org/wiki/Jerusalem" title="Jerusalem">Jerusalem</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Sweden.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/35px-Flag_of_Sweden.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/46px-Flag_of_Sweden.svg.png 2x" data-file-width="1600" data-file-height="1000" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Sweden_in_the_Eurovision_Song_Contest" title="Sweden in the Eurovision Song Contest">Sweden</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Take_Me_to_Your_Heaven_%28song%29" title="Take Me to Your Heaven (song)">Take Me to Your Heaven</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Charlotte_Perrelli" title="Charlotte Perrelli">Charlotte Nilsson</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Lars_Diedricson" title="Lars Diedricson">Lars 'Dille' Diedricson</a>, Marcos Ubeda</td>
+<td>163</td>
+<td><span style="display:none" class="sortkey">7001170000000000000</span>17</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/21px-Flag_of_Iceland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/32px-Flag_of_Iceland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/42px-Flag_of_Iceland.svg.png 2x" data-file-width="2500" data-file-height="1800" height="15" width="21">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Iceland_in_the_Eurovision_Song_Contest" title="Iceland in the Eurovision Song Contest">Iceland</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2000" title="Eurovision Song Contest 2000">2000</a></th>
+<td>13 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Sweden" title="Sweden"><img alt="Sweden" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Sweden.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/35px-Flag_of_Sweden.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/46px-Flag_of_Sweden.svg.png 2x" data-file-width="1600" data-file-height="1000" height="14" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Stockholm" title="Stockholm">Stockholm</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/20px-Flag_of_Denmark.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/31px-Flag_of_Denmark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/40px-Flag_of_Denmark.svg.png 2x" data-file-width="370" data-file-height="280" height="15" width="20">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Denmark_in_the_Eurovision_Song_Contest" title="Denmark in the Eurovision Song Contest">Denmark</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Fly_on_the_Wings_of_Love" title="Fly on the Wings of Love">Fly on the Wings of Love</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Olsen_Brothers" title="Olsen Brothers">Olsen Brothers</a></td>
+<td><a href="http://en.wikipedia.org/wiki/J%C3%B8rgen_Olsen" title="Jørgen Olsen" class="mw-redirect">Jørgen Olsen</a></td>
+<td>195</td>
+<td><span style="display:none" class="sortkey">7001400000000000000</span>40</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Russia.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/35px-Flag_of_Russia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/45px-Flag_of_Russia.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Russia_in_the_Eurovision_Song_Contest" title="Russia in the Eurovision Song Contest">Russia</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2001" title="Eurovision Song Contest 2001">2001</a></th>
+<td>12 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Denmark" title="Denmark"><img alt="Denmark" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/20px-Flag_of_Denmark.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/31px-Flag_of_Denmark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/40px-Flag_of_Denmark.svg.png 2x" data-file-width="370" data-file-height="280" height="15" width="20"></a></span> <a href="http://en.wikipedia.org/wiki/Copenhagen" title="Copenhagen">Copenhagen</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Estonia.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/35px-Flag_of_Estonia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/46px-Flag_of_Estonia.svg.png 2x" data-file-width="990" data-file-height="630" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Estonia_in_the_Eurovision_Song_Contest" title="Estonia in the Eurovision Song Contest">Estonia</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Everybody_%28Tanel_Padar_and_Dave_Benton_song%29" title="Everybody (Tanel Padar and Dave Benton song)">Everybody</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Tanel_Padar" title="Tanel Padar">Tanel Padar</a>, <a href="http://en.wikipedia.org/wiki/Dave_Benton" title="Dave Benton">Dave Benton</a> and <a href="http://en.wikipedia.org/wiki/Soul_Militia" title="Soul Militia">2XL</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Ivar_Must" title="Ivar Must">Ivar Must</a>, <a href="http://en.wikipedia.org/wiki/Maian-Anna_K%C3%A4rmas" title="Maian-Anna Kärmas" class="mw-redirect">Maian-Anna Kärmas</a></td>
+<td>198</td>
+<td><span style="display:none" class="sortkey">7001210000000000000</span>21</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/20px-Flag_of_Denmark.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/31px-Flag_of_Denmark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/40px-Flag_of_Denmark.svg.png 2x" data-file-width="370" data-file-height="280" height="15" width="20">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Denmark_in_the_Eurovision_Song_Contest" title="Denmark in the Eurovision Song Contest">Denmark</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2002" title="Eurovision Song Contest 2002">2002</a></th>
+<td>25 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Estonia" title="Estonia"><img alt="Estonia" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Estonia.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/35px-Flag_of_Estonia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/46px-Flag_of_Estonia.svg.png 2x" data-file-width="990" data-file-height="630" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Tallinn" title="Tallinn">Tallinn</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Latvia.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/35px-Flag_of_Latvia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/46px-Flag_of_Latvia.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Latvia_in_the_Eurovision_Song_Contest" title="Latvia in the Eurovision Song Contest">Latvia</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/I_Wanna_%28Marie_N_song%29" title="I Wanna (Marie N song)">I Wanna</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Marija_Naumova" title="Marija Naumova">Marie N</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Marija_Naumova" title="Marija Naumova">Marie N</a>, Marats Samauskis</td>
+<td>176</td>
+<td><span style="display:none" class="sortkey">7001120000000000000</span>12</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Malta.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Malta.svg/35px-Flag_of_Malta.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Malta.svg/45px-Flag_of_Malta.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Malta_in_the_Eurovision_Song_Contest" title="Malta in the Eurovision Song Contest">Malta</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2003" title="Eurovision Song Contest 2003">2003</a></th>
+<td>24 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Latvia" title="Latvia"><img alt="Latvia" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Latvia.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/35px-Flag_of_Latvia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/46px-Flag_of_Latvia.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Riga" title="Riga">Riga</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Turkey.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/35px-Flag_of_Turkey.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/45px-Flag_of_Turkey.svg.png 2x" data-file-width="1200" data-file-height="800" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Turkey_in_the_Eurovision_Song_Contest" title="Turkey in the Eurovision Song Contest">Turkey</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Everyway_That_I_Can" title="Everyway That I Can">Everyway That I Can</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Sertab_Erener" title="Sertab Erener">Sertab Erener</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Demir_Demirkan" title="Demir Demirkan">Demir Demirkan</a>, Sertab Erener</td>
+<td>167</td>
+<td><span style="display:none" class="sortkey">7000200000000000000</span>2</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Belgium_civil.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Belgium_%28civil%29.svg/35px-Flag_of_Belgium_%28civil%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Belgium_%28civil%29.svg/45px-Flag_of_Belgium_%28civil%29.svg.png 2x" data-file-width="450" data-file-height="300" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Belgium_in_the_Eurovision_Song_Contest" title="Belgium in the Eurovision Song Contest">Belgium</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2004" title="Eurovision Song Contest 2004">2004</a><br>
+<sup id="cite_ref-semi_final_6-0" class="reference"><a href="#cite_note-semi_final-6"><span>[</span>N 2<span>]</span></a></sup></th>
+<td>15 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Turkey" title="Turkey"><img alt="Turkey" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Turkey.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/35px-Flag_of_Turkey.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/45px-Flag_of_Turkey.svg.png 2x" data-file-width="1200" data-file-height="800" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Istanbul" title="Istanbul">Istanbul</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ukraine.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/35px-Flag_of_Ukraine.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/45px-Flag_of_Ukraine.svg.png 2x" data-file-width="1200" data-file-height="800" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Ukraine_in_the_Eurovision_Song_Contest" title="Ukraine in the Eurovision Song Contest">Ukraine</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Wild_Dances_%28single%29" title="Wild Dances (single)" class="mw-redirect">Wild Dances</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Ruslana" title="Ruslana">Ruslana</a></td>
+<td>Ruslana, <a href="http://en.wikipedia.org/wiki/Oleksandr_Ksenofontov" title="Oleksandr Ksenofontov">Oleksandr Ksenofontov</a></td>
+<td>280</td>
+<td><span style="display:none" class="sortkey">7001170000000000000</span>17</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Serbia_and_Montenegro.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/90/Flag_of_Serbia_and_Montenegro.svg/35px-Flag_of_Serbia_and_Montenegro.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/90/Flag_of_Serbia_and_Montenegro.svg/46px-Flag_of_Serbia_and_Montenegro.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Serbia_and_Montenegro_in_the_Eurovision_Song_Contest" title="Serbia and Montenegro in the Eurovision Song Contest">Serbia and Montenegro</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2005" title="Eurovision Song Contest 2005">2005</a></th>
+<td>21 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Ukraine" title="Ukraine"><img alt="Ukraine" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ukraine.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/35px-Flag_of_Ukraine.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/45px-Flag_of_Ukraine.svg.png 2x" data-file-width="1200" data-file-height="800" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Kiev" title="Kiev">Kiev</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Greece.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/35px-Flag_of_Greece.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/45px-Flag_of_Greece.svg.png 2x" data-file-width="600" data-file-height="400" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Greece_in_the_Eurovision_Song_Contest" title="Greece in the Eurovision Song Contest">Greece</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/My_Number_One" title="My Number One">My Number One</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Elena_Paparizou" title="Elena Paparizou">Helena Paparizou</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Christos_Dantis" title="Christos Dantis">Christos Dantis</a>, <a href="http://en.wikipedia.org/wiki/Natalia_Germanou" title="Natalia Germanou">Natalia Germanou</a></td>
+<td>230</td>
+<td><span style="display:none" class="sortkey">7001380000000000000</span>38</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Malta.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Malta.svg/35px-Flag_of_Malta.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Malta.svg/45px-Flag_of_Malta.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Malta_in_the_Eurovision_Song_Contest" title="Malta in the Eurovision Song Contest">Malta</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2006" title="Eurovision Song Contest 2006">2006</a></th>
+<td>20 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Greece" title="Greece"><img alt="Greece" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Greece.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/35px-Flag_of_Greece.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/45px-Flag_of_Greece.svg.png 2x" data-file-width="600" data-file-height="400" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Athens" title="Athens">Athens</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Finland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/35px-Flag_of_Finland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/46px-Flag_of_Finland.svg.png 2x" data-file-width="1800" data-file-height="1100" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Finland_in_the_Eurovision_Song_Contest" title="Finland in the Eurovision Song Contest">Finland</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Hard_Rock_Hallelujah" title="Hard Rock Hallelujah">Hard Rock Hallelujah</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Lordi" title="Lordi">Lordi</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Tomi_Putaansuu" title="Tomi Putaansuu" class="mw-redirect">Mr. Lordi</a></td>
+<td>292</td>
+<td><span style="display:none" class="sortkey">7001440000000000000</span>44</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Russia.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/35px-Flag_of_Russia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/45px-Flag_of_Russia.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Russia_in_the_Eurovision_Song_Contest" title="Russia in the Eurovision Song Contest">Russia</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2007" title="Eurovision Song Contest 2007">2007</a></th>
+<td>12 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Finland" title="Finland"><img alt="Finland" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Finland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/35px-Flag_of_Finland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/46px-Flag_of_Finland.svg.png 2x" data-file-width="1800" data-file-height="1100" height="14" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Helsinki" title="Helsinki">Helsinki</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Serbia_2004-2010.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Flag_of_Serbia_%282004-2010%29.svg/35px-Flag_of_Serbia_%282004-2010%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Flag_of_Serbia_%282004-2010%29.svg/45px-Flag_of_Serbia_%282004-2010%29.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Serbia_in_the_Eurovision_Song_Contest" title="Serbia in the Eurovision Song Contest">Serbia</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Molitva" title="Molitva">Molitva</a>" (Молитва)</td>
+<td><a href="http://en.wikipedia.org/wiki/Marija_%C5%A0erifovi%C4%87" title="Marija Šerifović">Marija Šerifović</a></td>
+<td>Saša Milošević Mare, <a href="http://en.wikipedia.org/wiki/Vladimir_Grai%C4%87" title="Vladimir Graić">Vladimir Graić</a></td>
+<td>268</td>
+<td><span style="display:none" class="sortkey">7001330000000000000</span>33</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ukraine.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/35px-Flag_of_Ukraine.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/45px-Flag_of_Ukraine.svg.png 2x" data-file-width="1200" data-file-height="800" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Ukraine_in_the_Eurovision_Song_Contest" title="Ukraine in the Eurovision Song Contest">Ukraine</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2008" title="Eurovision Song Contest 2008">2008</a><br>
+<sup id="cite_ref-two_semi_finals_7-0" class="reference"><a href="#cite_note-two_semi_finals-7"><span>[</span>N 3<span>]</span></a></sup></th>
+<td>24 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Serbia" title="Serbia"><img alt="Serbia" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Serbia_2004-2010.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Flag_of_Serbia_%282004-2010%29.svg/35px-Flag_of_Serbia_%282004-2010%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Flag_of_Serbia_%282004-2010%29.svg/45px-Flag_of_Serbia_%282004-2010%29.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Belgrade" title="Belgrade">Belgrade</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Russia.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/35px-Flag_of_Russia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/45px-Flag_of_Russia.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Russia_in_the_Eurovision_Song_Contest" title="Russia in the Eurovision Song Contest">Russia</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Believe_%28Dima_Bilan_song%29" title="Believe (Dima Bilan song)">Believe</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Dima_Bilan" title="Dima Bilan">Dima Bilan</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Jim_Beanz" title="Jim Beanz">Jim Beanz</a>, Dima Bilan</td>
+<td>272</td>
+<td><span style="display:none" class="sortkey">7001420000000000000</span>42</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Ukraine.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/35px-Flag_of_Ukraine.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/45px-Flag_of_Ukraine.svg.png 2x" data-file-width="1200" data-file-height="800" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Ukraine_in_the_Eurovision_Song_Contest" title="Ukraine in the Eurovision Song Contest">Ukraine</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2009" title="Eurovision Song Contest 2009">2009</a></th>
+<td>16 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Russia" title="Russia"><img alt="Russia" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Russia.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/35px-Flag_of_Russia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/45px-Flag_of_Russia.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Moscow" title="Moscow">Moscow</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/21px-Flag_of_Norway.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/32px-Flag_of_Norway.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/41px-Flag_of_Norway.svg.png 2x" data-file-width="1100" data-file-height="800" height="15" width="21">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Norway_in_the_Eurovision_Song_Contest" title="Norway in the Eurovision Song Contest">Norway</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Fairytale_%28Alexander_Rybak_song%29" title="Fairytale (Alexander Rybak song)">Fairytale</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Alexander_Rybak" title="Alexander Rybak">Alexander Rybak</a></td>
+<td>Alexander Rybak</td>
+<td>387</td>
+<td><span style="display:none" class="sortkey">7002169000000000000</span>169</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/21px-Flag_of_Iceland.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/32px-Flag_of_Iceland.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/42px-Flag_of_Iceland.svg.png 2x" data-file-width="2500" data-file-height="1800" height="15" width="21">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Iceland_in_the_Eurovision_Song_Contest" title="Iceland in the Eurovision Song Contest">Iceland</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2010" title="Eurovision Song Contest 2010">2010</a></th>
+<td>29 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Norway" title="Norway"><img alt="Norway" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/21px-Flag_of_Norway.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/32px-Flag_of_Norway.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/41px-Flag_of_Norway.svg.png 2x" data-file-width="1100" data-file-height="800" height="15" width="21"></a></span> <a href="http://en.wikipedia.org/wiki/Oslo" title="Oslo">Oslo</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Germany.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/35px-Flag_of_Germany.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/46px-Flag_of_Germany.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Germany_in_the_Eurovision_Song_Contest" title="Germany in the Eurovision Song Contest">Germany</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Satellite_%28Lena_Meyer-Landrut_song%29" title="Satellite (Lena Meyer-Landrut song)">Satellite</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Lena_Meyer-Landrut" title="Lena Meyer-Landrut">Lena</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Julie_Frost" title="Julie Frost">Julie Frost</a>, John Gordon</td>
+<td>246</td>
+<td><span style="display:none" class="sortkey">7001760000000000000</span>76</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Turkey.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/35px-Flag_of_Turkey.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/45px-Flag_of_Turkey.svg.png 2x" data-file-width="1200" data-file-height="800" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Turkey_in_the_Eurovision_Song_Contest" title="Turkey in the Eurovision Song Contest">Turkey</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2011" title="Eurovision Song Contest 2011">2011</a></th>
+<td>14 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Germany" title="Germany"><img alt="Germany" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Germany.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/35px-Flag_of_Germany.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/46px-Flag_of_Germany.svg.png 2x" data-file-width="1000" data-file-height="600" height="14" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/D%C3%BCsseldorf" title="Düsseldorf">Düsseldorf</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Azerbaijan.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/35px-Flag_of_Azerbaijan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/46px-Flag_of_Azerbaijan.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Azerbaijan_in_the_Eurovision_Song_Contest" title="Azerbaijan in the Eurovision Song Contest">Azerbaijan</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Running_Scared_%28Eldar_%26_Nigar_song%29" title="Running Scared (Eldar &amp; Nigar song)">Running Scared</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Ell_%26_Nikki" title="Ell &amp; Nikki">Ell/Nikki</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Stefan_%C3%96rn" title="Stefan Örn">Stefan Örn</a>, Sandra Bjurman, Iain Farquharson</td>
+<td>221</td>
+<td><span style="display:none" class="sortkey">7001320000000000000</span>32</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Italy.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/35px-Flag_of_Italy.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/45px-Flag_of_Italy.svg.png 2x" data-file-width="1500" data-file-height="1000" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Italy_in_the_Eurovision_Song_Contest" title="Italy in the Eurovision Song Contest">Italy</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2012" title="Eurovision Song Contest 2012">2012</a></th>
+<td>26 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Azerbaijan" title="Azerbaijan"><img alt="Azerbaijan" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Azerbaijan.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/35px-Flag_of_Azerbaijan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/46px-Flag_of_Azerbaijan.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Baku" title="Baku">Baku</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Sweden.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/35px-Flag_of_Sweden.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/46px-Flag_of_Sweden.svg.png 2x" data-file-width="1600" data-file-height="1000" height="14" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Sweden_in_the_Eurovision_Song_Contest" title="Sweden in the Eurovision Song Contest">Sweden</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Euphoria_%28Loreen_song%29" title="Euphoria (Loreen song)">Euphoria</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Loreen_%28singer%29" title="Loreen (singer)">Loreen</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Thomas_G:son" title="Thomas G:son">Thomas G:son</a>, <a href="http://en.wikipedia.org/wiki/Peter_Bostr%C3%B6m" title="Peter Boström">Peter Boström</a></td>
+<td>372</td>
+<td><span style="display:none" class="sortkey">7002113000000000000</span>113</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Russia.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/35px-Flag_of_Russia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/45px-Flag_of_Russia.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Russia_in_the_Eurovision_Song_Contest" title="Russia in the Eurovision Song Contest">Russia</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2013" title="Eurovision Song Contest 2013">2013</a></th>
+<td>18 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Sweden" title="Sweden"><img alt="Sweden" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Sweden.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/35px-Flag_of_Sweden.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/46px-Flag_of_Sweden.svg.png 2x" data-file-width="1600" data-file-height="1000" height="14" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Malm%C3%B6" title="Malmö">Malmö</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/20px-Flag_of_Denmark.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/31px-Flag_of_Denmark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/40px-Flag_of_Denmark.svg.png 2x" data-file-width="370" data-file-height="280" height="15" width="20">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Denmark_in_the_Eurovision_Song_Contest" title="Denmark in the Eurovision Song Contest">Denmark</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Only_Teardrops" title="Only Teardrops">Only Teardrops</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Emmelie_de_Forest" title="Emmelie de Forest">Emmelie de Forest</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Lise_Cabble" title="Lise Cabble">Lise Cabble</a>, Julia Fabrin Jakobsen, Thomas Stengaard</td>
+<td>281</td>
+<td><span style="display:none" class="sortkey">7001470000000000000</span>47</td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Azerbaijan.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/35px-Flag_of_Azerbaijan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/46px-Flag_of_Azerbaijan.svg.png 2x" data-file-width="1200" data-file-height="600" height="12" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Azerbaijan_in_the_Eurovision_Song_Contest" title="Azerbaijan in the Eurovision Song Contest">Azerbaijan</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2014" title="Eurovision Song Contest 2014">2014</a></th>
+<td>10 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Denmark" title="Denmark"><img alt="Denmark" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/20px-Flag_of_Denmark.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/31px-Flag_of_Denmark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/40px-Flag_of_Denmark.svg.png 2x" data-file-width="370" data-file-height="280" height="15" width="20"></a></span> <a href="http://en.wikipedia.org/wiki/Copenhagen" title="Copenhagen">Copenhagen</a></td>
+<td><span class="flagicon"><img alt="" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Austria.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/35px-Flag_of_Austria.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/45px-Flag_of_Austria.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23">&nbsp;</span><a href="http://en.wikipedia.org/wiki/Austria_in_the_Eurovision_Song_Contest" title="Austria in the Eurovision Song Contest">Austria</a></td>
+<td>"<a href="http://en.wikipedia.org/wiki/Rise_Like_a_Phoenix" title="Rise Like a Phoenix">Rise Like a Phoenix</a>"</td>
+<td><a href="http://en.wikipedia.org/wiki/Conchita_Wurst" title="Conchita Wurst">Conchita Wurst</a></td>
+<td>Charley Mason, Joey Patulka, Ali Zuckowski, Julian Maas</td>
+<td>290</td>
+<td>52</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Netherlands" title="Netherlands"><img alt="Netherlands" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_the_Netherlands.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/35px-Flag_of_the_Netherlands.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/45px-Flag_of_the_Netherlands.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Netherlands" title="Netherlands">Netherlands</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="http://en.wikipedia.org/wiki/Eurovision_Song_Contest_2015" title="Eurovision Song Contest 2015">2015</a></th>
+<td>16 May</td>
+<td><span class="flagicon"><a href="http://en.wikipedia.org/wiki/Austria" title="Austria"><img alt="Austria" src="List%20of%20Eurovision%20Song%20Contest%20winners%20-%20Wikipedia,%20the%20free%20encyclopedia_files/23px-Flag_of_Austria.png" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/35px-Flag_of_Austria.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/45px-Flag_of_Austria.svg.png 2x" data-file-width="900" data-file-height="600" height="15" width="23"></a></span> <a href="http://en.wikipedia.org/wiki/Austria" title="Austria">Austria</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody><tfoot></tfoot></table>
+   <center><table id= "userdata" border="2">
+	<h1>YAY DRINKING</h1>
+  <thead>
+            <th>Title</th>
+			<th>Artist</th>
+			<th>Year</th>
+			<th>Theme</th>
+			<th>5</th>
+			<th>6</th>
+        </thead>
+      <tbody>
+		
+       </tbody>
+   </table></center>
+   
+
+</div>
+<div id="map_canvas"></div>  
+</div>
+</body>
+</html>
