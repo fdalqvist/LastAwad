@@ -8,20 +8,31 @@
 		<link rel="stylesheet" media="only screen and (min-width: 481px)" href="devstyle.css" />
 		<link rel="stylesheet" media="only screen and (min-width: 481px)" href="grid.css" />
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc4qswXAX2nLT2_YptHxe2cWnAuc-pKYA&sensor=true"></script>
-		<script type="text/javascript">
-			function initialize() { 
-				var mapOptions = {
-					center: new google.maps.LatLng(2.8800, 23.6560), 
-					zoom: 8,
-				};
-				var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-			}
-			google.maps.event.addDomListener(window, 'load', initialize);
-		</script>
-		
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+<script>
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","trick.txt",true);
+xmlhttp.send();
+}
+</script>
 <script>
 
     $(function() {
@@ -64,12 +75,16 @@
 </div>
 <h2>Drinking Habits</h2>
 <br /><p>In the table below you can see the average drinkning habits of people in different parts of the world.
-<br /> Drink responsibly!</p>
+</p>
+<br />
+
 <div class="wrapper">
 <div class="profile">
 
-   <center>
-   <iframe width="480" height="360" src="//www.youtube.com/embed/189383205_k" frameborder="0" allowfullscreen></iframe>
+   <center><div id="myDiv"></div>
+<button type="button" onclick="loadXMLDoc()">Drink Responsibly!</button>
+	<br />
+   
    <table id= "userdata" border="2">
   <thead>
             <th>Location</th>
