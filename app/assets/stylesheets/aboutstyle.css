@@ -2,9 +2,14 @@ body {
 background: #ffffff;
 }
 
+#map_canvas{
+width: 800px;
+height: 600px;
+}
+
 div.map_canvas{
-width: 500px;
-height: 400px;
+width: 800px;
+height: 600px;
 }
 
 form {
