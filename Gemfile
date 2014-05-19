@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-#replacement for sqlite3 to appease heroku
-gem 'pg'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -44,7 +41,13 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :production, :staging do
+  #replacement for sqlite3 to appease heroku
+  gem 'pg'
+end
+
 group :development, :test do
+  gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
   gem 'rspec-rails'
 end
 
